@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 
 export default function TitleScreen() {
   useEffect(() => {
-    document.addEventListener('keypress', function (event) {
+    document.addEventListener('keypress', function listener(event) {
       console.log(event.key);
+      document.removeEventListener('keypress', listener);
     });
   }, []);
 

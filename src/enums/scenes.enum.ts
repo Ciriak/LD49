@@ -1,3 +1,3 @@
 export enum EScenes {
-  TITLE_SCREEN = 'title-screen',
+  TITLE_SCREEN = 'title_screen',
 }

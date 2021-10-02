@@ -1,12 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './app.scss';
+import VisualContainer from './components/VisualContainer/VisualContainer';
+import SequenceManager from './components/SequenceManager/SequenceManager';
+import Debug from './components/Debug/Debug';
 
 function App() {
   return (
     <div className="app">
+      {/* <Debug /> */}
       <div className="game">
-        <div className="dialog-container"></div>
+        <VisualContainer />
+        <SequenceManager />
       </div>
     </div>
   );
