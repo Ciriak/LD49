@@ -1,0 +1,50 @@
+.choice {
+  .choice-container {
+    overflow: hidden;
+    border: 4px #fff solid;
+    .dialog-container {
+      border: 0;
+      border-bottom: 4px #fff solid;
+      background: #000;
+    }
+  }
+  .options-container {
+    display: flex;
+    width: 100%;
+    margin-top: -40px;
+    border-top: 0;
+    animation: displayOptions 0.5s 1 steps(5, end) forwards;
+    animation-delay: 0.3s;
+    .option {
+      flex: 1;
+      border-left: 4px #fff solid;
+      text-align: center;
+      padding: 8px;
+      background-color: rgba($color: white, $alpha: 0.1);
+
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.3rem;
+
+      &.active,
+      &:focus {
+        animation: flashOption 1s infinite steps(5, end);
+      }
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+}
+
+@keyframes displayOptions {
+  to {
+    margin-top: 0px;
+  }
+}
+
+@keyframes flashOption {
+  50% {
+    background-color: rgba($color: white, $alpha: 0.4);
+  }
+}

@@ -1,0 +1,35 @@
+.visual-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s 1 forwards;
+  animation-timing-function: steps(5, end);
+  &.changing-scene {
+    animation: fadeOut 1s 1 forwards;
+    animation-timing-function: steps(5, end);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
