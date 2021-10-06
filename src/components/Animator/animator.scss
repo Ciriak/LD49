@@ -1,0 +1,31 @@
+.animator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .sprite {
+    animation-name: right;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+    will-change: transform;
+  }
+}
+
+@keyframes right {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: 64px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: scale(4) translateY(0px);
+  }
+  50% {
+    transform: scale(4) translateY(-4px);
+  }
+}
